@@ -8,24 +8,37 @@ import Foundation
   var arr = [1,2,3,4,5,6,7,8,9,10]
 
   for i in 0...arr.count/2 {
-      print(i)
+      //print(i)
       var t  =  arr[arr.count - i - 1];
       arr[arr.count-i - 1]=arr[i];
       arr[i] = t;
-      print(arr[i])
+      //print(arr[i])
   }
 
   print(arr)
 
 /*: Write code to check a String is palindrome or not?*/
-  var palindrom:String = "Eve"
-
-  func isPalindrom(string:String) -> Bool{
+func isPalindrom(string:String) -> Bool{
+  
+  for i in 0...string.characters.count/2{
+    //print(string[i])
+    let startChar = string[string.index(string.startIndex, offsetBy: i)]
+    let endChar = string[string.index(string.startIndex, offsetBy: string.characters.count - i - 1)]
+    if startChar != endChar{
+      print("startChar \(startChar) endChar \(endChar)")
+      return false
+    }
     
-    
-    return false
   }
+  
+  return  true
+}
 
+  var string:String = "eve"
+  isPalindrom(string:string)
+
+  var string2:String = "nopalindrom"
+  isPalindrom(string:string2)
 //: [Next](@next)
 //1) Write code to check a String is palindrome or not? (solution)
 //Palindrome are those String whose reverse is equal to original.This can be done by using either StringBuffer reverse() method or by technique demonstrated in the solution here.
