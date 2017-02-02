@@ -51,6 +51,23 @@ class LinkedList<T: Equatable>{
       return count == 0
     }
   }
+  
+  private func iterate(block: (_ node: NodeType, _ index: Int) throws -> NodeType?) rethrows -> NodeType? {
+    var node = start
+    var index = 0
+    
+    while node != nil {
+      let result = try block(node!, index)
+      if result != nil {
+        return result
+      }
+      index += 1
+      node = node?.next
+    }
+    
+    return nil
+  }
+  
 
   func appendNode(value:T){
     let previousEnd = end
@@ -62,9 +79,30 @@ class LinkedList<T: Equatable>{
     count += 1
   }
   
+  public func nodeAt(index: Int) -> NodeType {
+    precondition(index >= 0 && index < count, "Index \(index) out of bounds")
+    
+    let result = iterate {
+      if $1 == index {
+        return $0
+      }
+      
+      return nil
+    }
+    
+    return result!
+  }
+  
+  func recursionNodeAtIndex(index:Int){
+    
+  }
+  
+  func 
+  
 }
 
 let list = LinkedList([1,2,3])
+
 let list2 = LinkedList([1,2,3])
 
 
