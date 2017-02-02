@@ -4,7 +4,7 @@ import Foundation
 
 
 
-/*:1 Write code  for reverse array*/
+/*: Write code  for reverse array*/
   var arr = [1,2,3,4,5,6,7,8,9,10]
 
   for i in 0...arr.count/2 {
@@ -39,12 +39,15 @@ func isPalindrom(string:String) -> Bool{
 
   var string2:String = "nopalindrom"
   isPalindrom(string:string2)
+
+/*: Write a method which will remove any given character from a String?*/
+
+
 //: [Next](@next)
-//1) Write code to check a String is palindrome or not? (solution)
-//Palindrome are those String whose reverse is equal to original.This can be done by using either StringBuffer reverse() method or by technique demonstrated in the solution here.
-//
-//
-//2) Write a method which will remove any given character from a String? (solution)
+
+
+
+
 //hint : you can remove a given character from String by converting it into character array and then using substring() method for removing them from output string.
 //
 //

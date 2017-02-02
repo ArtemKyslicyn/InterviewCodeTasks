@@ -3,10 +3,9 @@
 
 ##### Write code to check a String is palindrome or not? 
 
-'''swift func isPalindrom(string:String) -> Bool{
+`func isPalindrom(string:String) -> Bool{
   
   for i in 0...string.characters.count/2{
-    //print(string[i])
     let startChar = string[string.index(string.startIndex, offsetBy: i)]
     let endChar = string[string.index(string.startIndex, offsetBy: string.characters.count - i - 1)]
     if startChar != endChar{
@@ -23,8 +22,8 @@
   isPalindrom(string:string)
 
   var string2:String = "nopalindrom"
-  isPalindrom(string:string2)
-'''
+  isPalindrom(string:string2)`
+
 
 ##### Write a method which will remove any given character from a String? 
 
