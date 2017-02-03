@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw'>
+<playground version='6.0' target-platform='macos' display-mode='rendered'>
     <pages>
         <page name='LogicQuestions'/>
         <page name='ArraySort'/>
         <page name='LinkedList'/>
+        <page name='Stack'/>
+        <page name='Queue'/>
+        <page name='BTree'/>
+        <page name='Multithreading'/>
+        <page name='Networking'/>
     </pages>
 </playground>

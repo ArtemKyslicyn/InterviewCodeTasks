@@ -245,4 +245,29 @@ list3.appendNode(value: 30)
 print()
 
 
+/*14) How do you find middle element of a linked list in single pass?
+To answer this programming question I would say you start with simple solution on which you traverse the LinkedList until you find the tail of linked list where it points to null to find the length of linked list and then reiterating till middle. After this answer interviewer will ask you find the middle element in single pass and there you can explain that by doing space-time trade-off you can use two pointers one incrementing one step at a time and other incrementing two step a time, so when first pointer reaches end of linked second pointer will point to the middle element.
+
+
+
+15) How do you find 3rd element from last in single pass? (solution)
+This programming question is similar to above and can be solved by using 2 pointers, start second pointer when first pointer reaches third place.
+
+
+16) How do you find if there is any loop in singly linked list? How do you find the start of the loop? (solution)
+This programming question can also be solved using 2 pointers and if you increase one pointer one step at a time and other as two steps at a time they will meet in some point if there is a loop.
+
+
+17) How do you reverse a singly linked list? (solution)
+
+
+18) Difference between linked list and array data structure? (answer)
+
+
+
+
+
+Read more: http://javarevisited.blogspot.com/2011/06/top-programming-interview-questions.html#ixzz4XddMXey8
+*/
+
 //: [Next](@next)
