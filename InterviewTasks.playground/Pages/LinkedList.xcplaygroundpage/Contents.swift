@@ -93,18 +93,54 @@ class LinkedList<T: Equatable>{
     return result!
   }
   
-  func recursionNodeAtIndex(index:Int){
-    
+
+  /// Return the value at a given index
+  ///
+  /// - complexity: O(n)
+  /// - parameter index: The index in the list
+  ///
+  /// - returns: The value at the provided index.
+  public func valueAt(index: Int) -> T {
+    let node = nodeAt(index: index)
+    return node.value
   }
   
-  func 
   
+  
+//  func backRecursiveIteration(block:(_ node: NodeType) throws -> NodeType?) {
+//    
+//     iterateItem(node: end,block: block)
+//   // return nil
+//  }
+//  
+//  
+//  
+//  func iterateItem(node:NodeType?,block:(_ node: NodeType) throws -> NodeType?){
+//    
+//    if let previosNode = node?.previous {
+//     print("node value \(node?.value)")
+//    
+//    let value  = try block(node!)
+//      
+//    iterateItem(node:previosNode,block: block)
+//    }else{
+//      //return node
+//    }
+//    
+//  }
+
 }
 
 let list = LinkedList([1,2,3])
 
 let list2 = LinkedList([1,2,3])
 
+list.backRecursiveIteration(block:{ item in
+ 
+  return item
+})
+  
+print()
 
 
 //: [Next](@next)
