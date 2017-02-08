@@ -1,6 +1,7 @@
 //: [Previous](@previous)
 
 import Foundation
+import Darwin
 
 var str = "Hello, playground"
 
@@ -202,9 +203,11 @@ if status != 0 {
 
 let httpSocketDescriptor = socketDescriptor
 //
-if httpSocketDescriptor == nil { applicationExit() } // Log entries should have been made
+if httpSocketDescriptor == nil {
 
-//
+} // Log entries should have been made
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 //// ===========================================================================
 //// Keep on accepting connection requests until a fatal error or a stop request
 //// ===========================================================================
@@ -221,10 +224,8 @@ if httpSocketDescriptor == nil { applicationExit() } // Log entries should have 
   
   // Incoming connections will be executed in this queue (in parallel)
   
-  let connectionQueue = DispatchQueue(
-    label: "ConnectionQueue",
-    attributes: [.concurrent, .qosUserInteractive]
-  )
+
+let connectionQueue = DispatchQueue(label: "ConnectionQueue", qos: .userInteractive, attributes: .concurrent)
   
   
   // ========================
@@ -262,13 +263,17 @@ if httpSocketDescriptor == nil { applicationExit() } // Log entries should have 
     // Request processing of the connection request in a different dispatch queue
     // ==========================================================================
     
-    connectionQueue.async() { receiveAndDispatch(socket: requestDescriptor)}
-  }
+    connectionQueue.async() {
+      
+     //receiveAndDispatch(socket: requestDescriptor)
+    }
+
+
+    func receiveAndDispatch(socket: Int32) {
+  
+  
+    }
 }
 
-func receiveAndDispatch(socket: Int32) {
-  
-  
-}
 
 //: [Next](@next)

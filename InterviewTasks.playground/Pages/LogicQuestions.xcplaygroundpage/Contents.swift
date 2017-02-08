@@ -41,6 +41,18 @@ func isPalindrom(string:String) -> Bool{
   isPalindrom(string:string2)
 
 /*: Write a method which will remove any given character from a String?*/
+func removeCharacter(string:String,character:Character)->String{
+  var resultString :String = ""
+  for strCharacter in string.characters{
+    if strCharacter != character{
+      resultString.append(strCharacter)
+    }
+  
+  }
+  return resultString
+}
+
+removeCharacter(string: "abbbbcd", character: "b")
 
 
 //: [Next](@next)
